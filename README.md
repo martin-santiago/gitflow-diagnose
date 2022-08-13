@@ -1,0 +1,1 @@
+Perdí mucho tiempo intentando leer el archivo y solo alcance a hacer top_retweeted 

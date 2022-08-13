@@ -4,6 +4,9 @@ import top_retweeted from "top_retweeted.py"
 import top_users from "top_users.py"
 
 def main:
-    pass
+    top_retweeted()
+    #top_days()
+    #top_users()
+    #top_hashtags()
 
 main()
