@@ -1,18 +1,8 @@
 # most retweeted tweets
 import json
-
+from read_dataset import read_tweets
 def top_retweeted():
-    tweetsList = []
-    print("Started Reading JSON ")
-    with open('farmers-protest-tweets-2021-03-5.json') as f:
-        for jsonObj in f:
-            tweetDict = json.loads(jsonObj)
-            tweetsList.append(tweetDict)
-    final_list = tweetsList.sort(reverse=True, key=sortMethod )
-    print(final_list)
-    print('los 10 tweets más retweeteados')
     
-def sortMethod(e):
-    return e["retweetCount"]
-
-top_retweeted()
+    tweets = read_tweets()
+    print('\n Los 10 tweets más retweeteados')
+    print(tweets.nlargest(10, 'retweetCount').filter(items=['id','url', 'date', 'retweetCount']))
